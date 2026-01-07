@@ -17,7 +17,7 @@ const FormikExample = () => {
             console.log(values);
 
             setList([...list, values])
-            
+
             f.handleReset()
         }
     })
