@@ -68,15 +68,15 @@ const FormikCrud = () => {
             <br /><hr /><br />
 
             {list.length === 0 ? (
-                <p>No Records Found</p>
+                <></>
             ) : (
                 <table border="1" cellPadding="10">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Surname</th>
-                            <th>Actions</th>
+                            <th colSpan={2}>Actions</th>
                         </tr>
                     </thead>
 
@@ -88,7 +88,8 @@ const FormikCrud = () => {
                                 <td>{item.surname}</td>
                                 <td>
                                     <button onClick={() => handleEdit(index)}>Edit</button>
-                                    &nbsp;
+                                </td>
+                                <td>
                                     <button onClick={() => handleDelete(index)}>Delete</button>
                                 </td>
                             </tr>
