@@ -7,12 +7,13 @@ const FormikTag = () => {
         name: '',
         surname: ''
     })
+    const [list, setList] = useState([]);
 
     const handleSubmit = (values, { resetForm }) => {
-        console.log(values);
+        
+
         resetForm()
     }
-
 
     return (
         <div>
@@ -26,6 +27,20 @@ const FormikTag = () => {
                     <button type="submit">submit</button>
                 </Form>
             </Formik>
+
+            {list.map((item, index) => {
+                <tr>
+                    <td>#</td>
+                    <td>Name</td>
+                    <td>sub1</td>
+                    <td>sub2</td>
+                    <td>sub3</td>
+                    <td>Min</td>
+                    <td>Max</td>
+                    <td>Total</td>
+                    <td>Per</td>
+                </tr>
+            })}
         </div>
     )
 }

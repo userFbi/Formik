@@ -4,6 +4,7 @@ import Formik from './Formik';
 import FormikExample from './FormikExample';
 import StudentResult from './FormikStudent';
 import FormikTag from './FormikTag';
+import Chat from './chat';
 
 
 
@@ -13,7 +14,8 @@ function App() {
       {/* <FormikExample /> */}
       {/* <StudentResult /> */}
       {/* <Formik /> */}
-      <FormikTag />
+      {/* <FormikTag /> */}
+      <Chat />
     </div>
   );
 }
