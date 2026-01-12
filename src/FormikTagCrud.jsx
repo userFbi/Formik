@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import React, { useState } from "react";
 
-const StudentResultFormik = () => {
+const FormikTagCrud = () => {
     const [students, setStudents] = useState([]);
     const [editIndex, setEditIndex] = useState(null);
 
@@ -78,7 +78,7 @@ const StudentResultFormik = () => {
                             <table border="1" cellPadding="10">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        {/* <th>#</th> */}
                                         <th>Name</th>
                                         <th>Sub1</th>
                                         <th>Sub2</th>
@@ -93,7 +93,7 @@ const StudentResultFormik = () => {
                                 <tbody>
                                     {students.map((item, index) => (
                                         <tr key={index}>
-                                            <td>{index + 1}</td>
+                                            {/* <td>{index + 1}</td> */}
                                             <td>{item.name}</td>
                                             <td>{item.sub1}</td>
                                             <td>{item.sub2}</td>
@@ -106,7 +106,7 @@ const StudentResultFormik = () => {
                                                 <button
                                                     onClick={() => {
                                                         setEditIndex(index);
-                                                        setValues(item); // ✅ WORKS
+                                                        setValues(item);
                                                     }}
                                                 >
                                                     Edit
@@ -128,4 +128,4 @@ const StudentResultFormik = () => {
     );
 };
 
-export default StudentResultFormik;
+export default FormikTagCrud;
